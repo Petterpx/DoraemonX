@@ -38,5 +38,9 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation(project(mapOf("path" to ":doraemon")))
+    if (rootProject.properties["IS_DEV"] == true) {
+        implementation(project(mapOf("path" to ":doraemon")))
+    }else{
+        implementation("com.github.Petterpx:DoraemonX:1.0-alpha")
+    }
 }

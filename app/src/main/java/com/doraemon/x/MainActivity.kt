@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 updatePreView {
                     defaultSize(300F)
-                    enablePreView = false
+                    enablePreView = true
                 }
             }.startAnalyze()
         }
