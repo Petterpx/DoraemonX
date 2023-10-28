@@ -38,9 +38,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    if (rootProject.properties["IS_DEV"] == true) {
-        implementation(project(mapOf("path" to ":doraemon")))
-    }else{
-        implementation("com.github.Petterpx:DoraemonX:1.0-alpha")
-    }
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
+//    if (extra.properties["IS_DEV"] == true) {
+    implementation(project(mapOf("path" to ":doraemon")))
+//    } else {
+//        implementation("com.github.Petterpx:DoraemonX:1.0-alpha")
+//    }
 }

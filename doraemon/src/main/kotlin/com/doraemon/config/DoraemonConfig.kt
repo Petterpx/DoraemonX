@@ -11,7 +11,7 @@ class DoraemonConfig private constructor() {
     var context: Context? = null
     var intervalTime: Long = 10L
     var enablePreview = false
-    var resultListener: GestureResultListener? = null
+    internal var resultListener: GestureResultListener? = null
     internal val preViewConfig: PreViewConfig = PreViewConfig()
 
     fun updatePreView(obj: PreViewConfig.() -> Unit) {

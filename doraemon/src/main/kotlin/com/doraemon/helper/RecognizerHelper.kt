@@ -80,7 +80,7 @@ class RecognizerHelper {
             imageProxy.height,
             Bitmap.Config.ARGB_8888,
         )
-        imageProxy.use { bitmapBuffer.copyPixelsFromBuffer(imageProxy.planes[0].buffer) }
+        bitmapBuffer.copyPixelsFromBuffer(imageProxy.planes[0].buffer)
         imageProxy.close()
         val matrix = Matrix().apply {
             postRotate(imageProxy.imageInfo.rotationDegrees.toFloat())

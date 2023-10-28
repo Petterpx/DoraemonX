@@ -36,6 +36,13 @@ class CameraHelper {
         )
     }
 
+    fun cancelCamera() {
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(DoraemonX.context)
+        if (cameraProviderFuture.isCancelled) return
+        cameraProvider?.unbindAll()
+        cameraProviderFuture.cancel(true)
+    }
+
     @SuppressLint("UnsafeOptInUsageError")
     private fun bindCameraUseCases(
         lifecycle: LifecycleOwner,

@@ -24,6 +24,7 @@ gradle.afterProject {
     val localProperties = readPropertiesIfExist(File(settingsDir, "local.properties"))
     extra.properties["IS_DEV"] =
         localProperties.getProperty("IS_DEV").toBooleanStrictOrNull() ?: false
+
 }
 
 fun readPropertiesIfExist(propertiesFile: File): java.util.Properties {
