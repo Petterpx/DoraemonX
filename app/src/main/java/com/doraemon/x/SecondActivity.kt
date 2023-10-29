@@ -18,8 +18,8 @@ class SecondActivity : AppCompatActivity() {
                 intervalTime = 500L
                 context = XApplication.context
                 updatePreView {
-                    defaultSize(1F)
-                    enablePreView = false
+                    defaultSize(100F)
+                    enablePreView = true
                 }
             }.startAnalyze(this, object : GestureResultListener {
                 override fun onDefaultResult(type: GestureType, time: Long) {
